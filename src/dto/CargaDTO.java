@@ -8,6 +8,7 @@ public class CargaDTO implements Serializable {
 
 	private int idCarga;
 	private float peso;
+	
 	private float ancho;
 	private float alto;
 	private float profundidad;
