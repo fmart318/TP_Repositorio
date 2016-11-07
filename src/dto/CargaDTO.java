@@ -10,6 +10,7 @@ public class CargaDTO implements Serializable {
 	private float peso;
 	private float ancho;
 	private float alto;
+	
 	private float profundidad;
 	private float volumen;
 	private String fragilidad;
