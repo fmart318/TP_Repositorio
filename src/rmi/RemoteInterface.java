@@ -9,8 +9,8 @@ import dto.ClienteDTO;
 import dto.EnvioDTO;
 import dto.FacturaDTO;
 import dto.HabilitadoDTO;
-import dto.PedidoDTO;
 import dto.SucursalDTO;
+import dto.PedidoDTO;
 import dto.TransporteDTO;
 import dto.TrayectoDTO;
 import dto.VehiculoDTO;
@@ -21,15 +21,28 @@ public interface RemoteInterface extends Remote {
 	public List<SucursalDTO> obtenerSucursales() throws RemoteException;
 
 	public void altaPedido(PedidoDTO pedidoDTO) throws RemoteException;
-
 	public void altaCliente(ClienteDTO clienteDto) throws RemoteException;
 
+	public List<ViajeDTO> obtenerViajes() throws RemoteException;
+
 	public VehiculoDTO obtenerVehiculo(VehiculoDTO v) throws RemoteException;
+
+	public ViajeDTO obtenerViajePorVehiculo(VehiculoDTO vehiculo)
+			throws RemoteException;
+
+	public void actualiarViaje(ViajeDTO viaje) throws RemoteException;
 
 	public List<ViajeDTO> controlarPedidosDeCliente(ClienteDTO c)
 			throws RemoteException;
 
+	public ViajeDTO obtenerViaje(ViajeDTO viajeDTO) throws RemoteException;
+
+	public void demorarViaje(ViajeDTO viajeDTO, int m) throws RemoteException;
+
 	public void actualizarMapaDeRutas(TrayectoDTO t) throws RemoteException;
+
+	public void actualizarViajes(TrayectoDTO trayDTO, SucursalDTO sucursalDTO)
+			throws RemoteException;
 
 	public List<TransporteDTO> obtenerTransportesDeTerceros(CargaDTO c,
 			TransporteDTO tr) throws RemoteException;
