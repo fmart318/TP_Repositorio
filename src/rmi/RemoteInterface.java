@@ -24,12 +24,12 @@ public interface RemoteInterface extends Remote {
 
 	public void altaCliente(ClienteDTO clienteDto) throws RemoteException;
 
-	public VehiculoDTO obtenerVehiculo(VehiculoDTO v) throws RemoteException;
+	public VehiculoDTO obtenerVehiculo(int vehiculoId) throws RemoteException;
 
 	public List<ViajeDTO> controlarPedidosDeCliente(ClienteDTO c)
 			throws RemoteException;
 
-	public void actualizarMapaDeRutas(TrayectoDTO t) throws RemoteException;
+	public void agregarTrayectoAMapaDeRutas(TrayectoDTO t) throws RemoteException;
 
 	public List<TransporteDTO> obtenerTransportesDeTerceros(CargaDTO c,
 			TransporteDTO tr) throws RemoteException;
@@ -47,7 +47,7 @@ public interface RemoteInterface extends Remote {
 	public String validarCredenciales(String username, String password)
 			throws RemoteException;
 
-	public void recibir(ViajeDTO v) throws RemoteException;
+	public void viajeFinalizado(ViajeDTO v) throws RemoteException;
 
 	public PedidoDTO obtenerPedido(int idPedido) throws RemoteException;
 
@@ -56,13 +56,13 @@ public interface RemoteInterface extends Remote {
 
 	public List<HabilitadoDTO> obtenerHabilitados() throws RemoteException;
 
-	public List<EnvioDTO> obtenerEnvios(String nombre) throws RemoteException;
+	public List<EnvioDTO> obtenerEnviosDelCliente(int idCliente) throws RemoteException;
 
 	public List<TransporteDTO> obtenerTransportes() throws RemoteException;
 
 	public List<VehiculoDTO> obtenerVehiculos() throws RemoteException;
 
-	public boolean ControlarVehiculo(VehiculoDTO vehiculoDTO)
+	public boolean controlarMantenimientoVehiculo(VehiculoDTO vehiculoDTO)
 			throws RemoteException;
 
 	public void enviar() throws RemoteException;
