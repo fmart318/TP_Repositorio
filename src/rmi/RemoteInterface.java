@@ -9,8 +9,8 @@ import dto.ClienteDTO;
 import dto.EnvioDTO;
 import dto.FacturaDTO;
 import dto.HabilitadoDTO;
-import dto.PedidoDTO;
 import dto.SucursalDTO;
+import dto.PedidoDTO;
 import dto.TransporteDTO;
 import dto.TrayectoDTO;
 import dto.VehiculoDTO;
@@ -21,7 +21,6 @@ public interface RemoteInterface extends Remote {
 	public List<SucursalDTO> obtenerSucursales() throws RemoteException;
 
 	public void altaPedido(PedidoDTO pedidoDTO) throws RemoteException;
-
 	public void altaCliente(ClienteDTO clienteDto) throws RemoteException;
 
 	public List<ViajeDTO> obtenerViajes() throws RemoteException;
