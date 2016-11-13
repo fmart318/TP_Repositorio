@@ -29,4 +29,5 @@ public interface RemoteInterfaceViaje extends Remote {
 
 	public void actualizarViajes(TrayectoDTO trayDTO, SucursalDTO sucursalDTO);
 
+	
 }
