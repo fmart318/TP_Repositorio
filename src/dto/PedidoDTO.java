@@ -9,6 +9,7 @@ public class PedidoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int idPedido;
+	private int prioridad;
 	private DireccionDTO direccionCarga;
 	private DireccionDTO direccionDestino;
 	private Date fechaCarga;
@@ -55,6 +56,14 @@ public class PedidoDTO implements Serializable {
 
 	public void setIdPedido(int idPedido) {
 		this.idPedido = idPedido;
+	}
+
+	public int getPrioridad() {
+		return prioridad;
+	}
+
+	public void setPrioridad(int prioridad) {
+		this.prioridad = prioridad;
 	}
 
 	public DireccionDTO getDireccionCarga() {
